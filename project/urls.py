@@ -18,6 +18,8 @@ from django.urls import include, path
 from rest_framework_simplejwt import views as jwt_views
 from .views import MyTokenObtainPairView
 
+from django.views.decorators.csrf import csrf_exempt
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/snacks/", include("snacks.urls")),
